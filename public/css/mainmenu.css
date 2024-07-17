@@ -1,0 +1,145 @@
+html,
+body {
+  margin: 0px;
+}
+
+body {
+  background-color: rgb(255, 207, 163);
+}
+
+/* 
+    * Page header
+*/
+
+/* > Page Header */
+.PageHeader {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(28, 146, 192);
+  border-bottom: 2px solid rgb(19, 96, 126);
+  z-index: 2;
+}
+
+/* > Greeting text */
+.PageHeaderGreetingText {
+  position: absolute;
+  display: flex;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 80px;
+  font-style: bold;
+  color: #fff;
+}
+
+/*
+    * Page body
+*/
+
+/* > Page Body height */
+.PageBody {
+  height: 10000px;
+}
+
+/* > Store*/
+.Store {
+  position: relative;
+  height: 400px;
+  width: calc(100% -10px);
+  background-color: rgb(247, 192, 140);
+  margin: 5px 5px 5px 5px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+/* > Store Header */
+.StoreHeader {
+  padding: 20px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  border-radius: 10px 10px 0px 0px;
+}
+
+/* > Container for covering the food container */
+.FC {
+  width: 100%;
+  height: calc(80% - 10px);
+  overflow-x: auto;
+  border-radius: 0px 0px 10px 10px;
+  scrollbar-width: none;
+}
+
+/* > Food container that hold the food item card */
+.Food.Container {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  height: 100%;
+  margin-left: -20px;
+  align-items: center;
+}
+
+/* * Item cad configuration */
+/* > Item card properties */
+.Food.Item {
+  position: relative;
+  display: flex;
+  width: 240px;
+  height: 240px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* > Food item hover */
+.Food.Item:hover {
+  width: 250px;
+  height: 250px;
+  margin-left: 20px; /* Corrected typo: '10x' to '10px' */
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* > Background image */
+.FoodImage {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Food.Item:hover .FoodImage,
+.FoodName:hover + .FoodImage {
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* > Food name */
+.FoodName {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  font-size: 30px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Food.Item:hover .FoodName,
+.FoodName:hover {
+  opacity: 1;
+}
